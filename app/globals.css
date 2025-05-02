@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 12, 12, 16;
+  --background-end-rgb: 12, 12, 16;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.bg-grid-pattern {
+  background-image: linear-gradient(
+      to right,
+      rgba(55, 65, 81, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(55, 65, 81, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.custom-radial-gradient {
+  background: linear-gradient(
+      0deg,
+      rgba(21, 37, 59, 0.7),
+      rgba(21, 37, 59, 0.7)
+    ),
+    radial-gradient(
+      70.75% 70.75% at 25.84% -12.15%,
+      rgba(62, 255, 139, 0.4) 0%,
+      rgba(62, 255, 139, 0.05) 100%
+    );
+
+}
+
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Make sure the accordion styling matches the design */
+.accordion-content {
+  background-color: #0c0c10;
+}
+
+/* Ensure buttons have the exact styling from the design */
+.btn-sign-in {
+  background-color: #4ade80;
+  color: #000000;
+  border-radius: 9999px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+}
+
+.btn-convert {
+  background-color: #4ade80;
+  color: #000000;
+  border-radius: 9999px;
+  padding: 0.75rem 2rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.gradient-border {
+  border: 1px solid transparent;
+  border-image-source: linear-gradient(
+    97.47deg,
+    #3eff8b 49.17%,
+    rgba(62, 255, 139, 0.3) 79.01%
+  );
+  border-image-slice: 1;
+}
+@media (max-width: 1260px){
+  .responsive_sidebar  {
+    left: 65px;
+  }
+}
+@media (max-width: 1199px){
+  .responsive_sidebar  {
+    left: 45px;
+  }
+}
+@media (max-width: 1024px){
+  .responsive_sidebar  {
+    left: 15px;
+  }
+}
+
+
+@media (max-width: 767px){
+.exchange_main{
+  width: 100%;
+  background: #1e2330;
+  margin-right: 0 !important;
+  padding: 20px;
+  border-radius: 15px;
+  flex-direction: column;
+  position: relative;
+
+}
+.support_button{
+  bottom: 130px;
+}
+.chat_bottom{
+  bottom: 64px;
+  border-radius: 0 !important;
+}
+.exchange_main_wrapper{
+  padding: 20px;
+}
+.exchange_main_mid{
+  padding: 0;
+  padding-bottom: 20px;
+}
+.exchange_main_back{
+  margin-right: 0;
+  width:30px;
+  height: 30px;
+  margin-left: auto;
+  font-size: 0;
+  border: 1px solid #4ade80;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+}
+.exchange_main_back svg{
+  stroke: #4ade80;
+  margin: auto;
+}
+.deliver_wrapper{
+  padding: 20px;
+}
+.map_wrapper{
+  height: 200px;
+}
+.history_wrapper{
+  padding: 20px;
+}
+.textard{
+  font-size: 20px;
+}
+.re_his_hide{
+  display: none;
+}
+.profile_user{
+  flex-direction: column;
+  gap: 20px;
+}
+}
+@media (max-width: 575px){
+  .exchange_main_wrapper h1{
+    font-size: 28px;
+  }
+  .step_circle{
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+  .send_wrap .truncate{
+    font-size: 12px;
+  }
+}
